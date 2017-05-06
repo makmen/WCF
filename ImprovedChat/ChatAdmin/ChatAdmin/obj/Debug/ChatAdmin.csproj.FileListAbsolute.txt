@@ -1,0 +1,6 @@
+D:\need\buffer\train_WCF\ChatAdmin\ChatAdmin\bin\Debug\ChatAdmin.dll.config
+D:\need\buffer\train_WCF\ChatAdmin\ChatAdmin\bin\Debug\ChatAdmin.dll
+D:\need\buffer\train_WCF\ChatAdmin\ChatAdmin\bin\Debug\ChatAdmin.pdb
+D:\need\buffer\train_WCF\ChatAdmin\ChatAdmin\obj\Debug\ChatAdmin.csprojResolveAssemblyReference.cache
+D:\need\buffer\train_WCF\ChatAdmin\ChatAdmin\obj\Debug\ChatAdmin.dll
+D:\need\buffer\train_WCF\ChatAdmin\ChatAdmin\obj\Debug\ChatAdmin.pdb

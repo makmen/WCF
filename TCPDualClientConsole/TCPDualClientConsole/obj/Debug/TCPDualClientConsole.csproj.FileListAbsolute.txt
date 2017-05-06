@@ -1,0 +1,5 @@
+D:\need\buffer\train_WCF\TCPDualClientConsole\TCPDualClientConsole\bin\Debug\TCPDualClientConsole.exe.config
+D:\need\buffer\train_WCF\TCPDualClientConsole\TCPDualClientConsole\bin\Debug\TCPDualClientConsole.exe
+D:\need\buffer\train_WCF\TCPDualClientConsole\TCPDualClientConsole\bin\Debug\TCPDualClientConsole.pdb
+D:\need\buffer\train_WCF\TCPDualClientConsole\TCPDualClientConsole\obj\Debug\TCPDualClientConsole.exe
+D:\need\buffer\train_WCF\TCPDualClientConsole\TCPDualClientConsole\obj\Debug\TCPDualClientConsole.pdb

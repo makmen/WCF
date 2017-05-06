@@ -1,0 +1,6 @@
+D:\need\buffer\train_WCF\RemoteServiceServer\RemoteServiceServer\bin\Debug\RemoteServiceServer.dll.config
+D:\need\buffer\train_WCF\RemoteServiceServer\RemoteServiceServer\bin\Debug\RemoteServiceServer.dll
+D:\need\buffer\train_WCF\RemoteServiceServer\RemoteServiceServer\bin\Debug\RemoteServiceServer.pdb
+D:\need\buffer\train_WCF\RemoteServiceServer\RemoteServiceServer\obj\Debug\RemoteServiceServer.csprojResolveAssemblyReference.cache
+D:\need\buffer\train_WCF\RemoteServiceServer\RemoteServiceServer\obj\Debug\RemoteServiceServer.dll
+D:\need\buffer\train_WCF\RemoteServiceServer\RemoteServiceServer\obj\Debug\RemoteServiceServer.pdb

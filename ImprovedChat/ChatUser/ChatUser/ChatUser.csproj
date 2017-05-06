@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C470C84-D362-49FC-9D01-F81283A988D1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChatUser</RootNamespace>
+    <AssemblyName>ChatUser</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CallbackHandler.cs" />
+    <Compile Include="ErrorContols.cs" />
+    <Compile Include="Logging.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Page Include="ClientWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExpressionDark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClientWindow.xaml.cs">
+      <DependentUpon>ClientWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Service References\ServiceReference1\ChatAdmin.Model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\ChatUser.ServiceReference1.ReplyNewUser.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference1\service.wsdl" />
+    <None Include="Service References\ServiceReference1\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ban.png" />
+    <Resource Include="Images\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\computers011.ico" />
+    <Resource Include="Images\computers018.ico" />
+    <Resource Include="Images\computers049.ico" />
+    <Resource Include="Images\computers164.ico" />
+    <Resource Include="Images\computers175.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\computers008.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\war027.ico" />
+    <Resource Include="Images\war035.ico" />
+    <Resource Include="Images\war036.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\war042.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\computers449.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Smiles\afro.gif" />
+    <Resource Include="Smiles\angry.gif" />
+    <Resource Include="Smiles\argue.gif" />
+    <Resource Include="Smiles\arrow.gif" />
+    <Resource Include="Smiles\artist.gif" />
+    <Resource Include="Smiles\ass.gif" />
+    <Resource Include="Smiles\baby.gif" />
+    <Resource Include="Smiles\ban.gif" />
+    <Resource Include="Smiles\band.gif" />
+    <Resource Include="Smiles\bangin.gif" />
+    <Resource Include="Smiles\banned.gif" />
+    <Resource Include="Smiles\bash.gif" />
+    <Resource Include="Smiles\bath.gif" />
+    <Resource Include="Smiles\beer.gif" />
+    <Resource Include="Smiles\biggrin.gif" />
+    <Resource Include="Smiles\blush.gif" />
+    <Resource Include="Smiles\book.gif" />
+    <Resource Include="Smiles\bored.gif" />
+    <Resource Include="Smiles\bounce.gif" />
+    <Resource Include="Smiles\bow.gif" />
+    <Resource Include="Smiles\box.gif" />
+    <Resource Include="Smiles\boxed.gif" />
+    <Resource Include="Smiles\boxing.gif" />
+    <Resource Include="Smiles\bvns.gif" />
+    <Resource Include="Smiles\cat.gif" />
+    <Resource Include="Smiles\chair.gif" />
+    <Resource Include="Smiles\cheers.gif" />
+    <Resource Include="Smiles\chinese.gif" />
+    <Resource Include="Smiles\chips.gif" />
+    <Resource Include="Smiles\chupa.gif" />
+    <Resource Include="Smiles\chveti.gif" />
+    <Resource Include="Smiles\clap.gif" />
+    <Resource Include="Smiles\clover.gif" />
+    <Resource Include="Smiles\cold.gif" />
+    <Resource Include="Smiles\confused.gif" />
+    <Resource Include="Smiles\cool.gif" />
+    <Resource Include="Smiles\crazy.gif" />
+    <Resource Include="Smiles\crutch.gif" />
+    <Resource Include="Smiles\cry.gif" />
+    <Resource Include="Smiles\crybaby.gif" />
+    <Resource Include="Smiles\ded.gif" />
+    <Resource Include="Smiles\deer.gif" />
+    <Resource Include="Smiles\devil.gif" />
+    <Resource Include="Smiles\diagnoz.gif" />
+    <Resource Include="Smiles\disgust.gif" />
+    <Resource Include="Smiles\dj.gif" />
+    <Resource Include="Smiles\djiga.gif" />
+    <Resource Include="Smiles\doctor.gif" />
+    <Resource Include="Smiles\dog.gif" />
+    <Resource Include="Smiles\dots.gif" />
+    <Resource Include="Smiles\drool.gif" />
+    <Resource Include="Smiles\drunk.gif" />
+    <Resource Include="Smiles\duel.gif" />
+    <Resource Include="Smiles\durik.gif" />
+    <Resource Include="Smiles\eat.gif" />
+    <Resource Include="Smiles\eda.gif" />
+    <Resource Include="Smiles\eek.gif" />
+    <Resource Include="Smiles\euro.gif" />
+    <Resource Include="Smiles\evil.gif" />
+    <Resource Include="Smiles\excl.gif" />
+    <Resource Include="Smiles\flex.gif" />
+    <Resource Include="Smiles\flo.gif" />
+    <Resource Include="Smiles\flowers.gif" />
+    <Resource Include="Smiles\fox.gif" />
+    <Resource Include="Smiles\freeze.gif" />
+    <Resource Include="Smiles\fundance.gif" />
+    <Resource Include="Smiles\furious.gif" />
+    <Resource Include="Smiles\gathering.gif" />
+    <Resource Include="Smiles\gorec.gif" />
+    <Resource Include="Smiles\gossip.gif" />
+    <Resource Include="Smiles\gum.gif" />
+    <Resource Include="Smiles\guns.gif" />
+    <Resource Include="Smiles\handshake.gif" />
+    <Resource Include="Smiles\hello.gif" />
+    <Resource Include="Smiles\help.gif" />
+    <Resource Include="Smiles\hi.gif" />
+    <Resource Include="Smiles\hmm.gif" />
+    <Resource Include="Smiles\holiday.gif" />
+    <Resource Include="Smiles\honour.gif" />
+    <Resource Include="Smiles\hoover.gif" />
+    <Resource Include="Smiles\horse.gif" />
+    <Resource Include="Smiles\hot.gif" />
+    <Resource Include="Smiles\hulugany.gif" />
+    <Resource Include="Smiles\hypnosis.gif" />
+    <Resource Include="Smiles\idea.gif" />
+    <Resource Include="Smiles\ill.gif" />
+    <Resource Include="Smiles\innocent.gif" />
+    <Resource Include="Smiles\in_love.gif" />
+    <Resource Include="Smiles\ipod.gif" />
+    <Resource Include="Smiles\isus.gif" />
+    <Resource Include="Smiles\kachok.gif" />
+    <Resource Include="Smiles\kicking.gif" />
+    <Resource Include="Smiles\kiss.gif" />
+    <Resource Include="Smiles\kuku.gif" />
+    <Resource Include="Smiles\lamo.gif" />
+    <Resource Include="Smiles\laugh.gif" />
+    <Resource Include="Smiles\lebedi.gif" />
+    <Resource Include="Smiles\lightbulb.gif" />
+    <Resource Include="Smiles\lol.gif" />
+    <Resource Include="Smiles\lol_sign.gif" />
+    <Resource Include="Smiles\love.gif" />
+    <Resource Include="Smiles\mad.gif" />
+    <Resource Include="Smiles\man.gif" />
+    <Resource Include="Smiles\midge.gif" />
+    <Resource Include="Smiles\mobile.gif" />
+    <Resource Include="Smiles\money.gif" />
+    <Resource Include="Smiles\monik.gif" />
+    <Resource Include="Smiles\monneyman.gif" />
+    <Resource Include="Smiles\moroz.gif" />
+    <Resource Include="Smiles\moto.gif" />
+    <Resource Include="Smiles\naughty.gif" />
+    <Resource Include="Smiles\nerd.gif" />
+    <Resource Include="Smiles\no.gif" />
+    <Resource Include="Smiles\notworthy.gif" />
+    <Resource Include="Smiles\nuke.gif" />
+    <Resource Include="Smiles\oldman.gif" />
+    <Resource Include="Smiles\oops.gif" />
+    <Resource Include="Smiles\pepsi.gif" />
+    <Resource Include="Smiles\phone.gif" />
+    <Resource Include="Smiles\photo.gif" />
+    <Resource Include="Smiles\pimp.gif" />
+    <Resource Include="Smiles\pokey.gif" />
+    <Resource Include="Smiles\pont.gif" />
+    <Resource Include="Smiles\present.gif" />
+    <Resource Include="Smiles\proger.gif" />
+    <Resource Include="Smiles\punk.gif" />
+    <Resource Include="Smiles\question.gif" />
+    <Resource Include="Smiles\ranting.gif" />
+    <Resource Include="Smiles\rapper.gif" />
+    <Resource Include="Smiles\razer.gif" />
+    <Resource Include="Smiles\ready.gif" />
+    <Resource Include="Smiles\rentgen.gif" />
+    <Resource Include="Smiles\rip.gif" />
+    <Resource Include="Smiles\rockon.gif" />
+    <Resource Include="Smiles\rolleyes.gif" />
+    <Resource Include="Smiles\rtfm.gif" />
+    <Resource Include="Smiles\r_cake.gif" />
+    <Resource Include="Smiles\r_coffee.gif" />
+    <Resource Include="Smiles\r_csip.gif" />
+    <Resource Include="Smiles\r_help.gif" />
+    <Resource Include="Smiles\r_love.gif" />
+    <Resource Include="Smiles\r_pizza.gif" />
+    <Resource Include="Smiles\r_rain.gif" />
+    <Resource Include="Smiles\r_thunder.gif" />
+    <Resource Include="Smiles\sad.gif" />
+    <Resource Include="Smiles\sad2.gif" />
+    <Resource Include="Smiles\salaski.gif" />
+    <Resource Include="Smiles\serenade.gif" />
+    <Resource Include="Smiles\shaman.gif" />
+    <Resource Include="Smiles\shaver.gif" />
+    <Resource Include="Smiles\shit.gif" />
+    <Resource Include="Smiles\shock.gif" />
+    <Resource Include="Smiles\shocking.gif" />
+    <Resource Include="Smiles\shutup.gif" />
+    <Resource Include="Smiles\sick.gif" />
+    <Resource Include="Smiles\sleep.gif" />
+    <Resource Include="Smiles\smartass.gif" />
+    <Resource Include="Smiles\smile.gif" />
+    <Resource Include="Smiles\smilie_tux.gif" />
+    <Resource Include="Smiles\smilie_xp.gif" />
+    <Resource Include="Smiles\smoke.gif" />
+    <Resource Include="Smiles\sneg.gif" />
+    <Resource Include="Smiles\snowboard.gif" />
+    <Resource Include="Smiles\spam.gif" />
+    <Resource Include="Smiles\sp_ike.gif" />
+    <Resource Include="Smiles\stretcher.gif" />
+    <Resource Include="Smiles\surrender.gif" />
+    <Resource Include="Smiles\taz.gif" />
+    <Resource Include="Smiles\teeth.gif" />
+    <Resource Include="Smiles\tel.gif" />
+    <Resource Include="Smiles\thumbdown.gif" />
+    <Resource Include="Smiles\thumbup.gif" />
+    <Resource Include="Smiles\tongue.gif" />
+    <Resource Include="Smiles\unsure.gif" />
+    <Resource Include="Smiles\vampire.gif" />
+    <Resource Include="Smiles\walkman.gif" />
+    <Resource Include="Smiles\wallbash.gif" />
+    <Resource Include="Smiles\wazuuup.gif" />
+    <Resource Include="Smiles\wc.gif" />
+    <Resource Include="Smiles\whistle.gif" />
+    <Resource Include="Smiles\wink.gif" />
+    <Resource Include="Smiles\wow.gif" />
+    <Resource Include="Smiles\yawn.gif" />
+    <Resource Include="Smiles\yes.gif" />
+    <Resource Include="Smiles\yinyang.gif" />
+    <Resource Include="Smiles\zorro.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

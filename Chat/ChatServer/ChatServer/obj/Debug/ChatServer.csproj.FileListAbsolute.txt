@@ -1,0 +1,6 @@
+D:\need\buffer\train_WCF\ChatServer\ChatServer\bin\Debug\ChatServer.exe.config
+D:\need\buffer\train_WCF\ChatServer\ChatServer\obj\Debug\ChatServer.csprojResolveAssemblyReference.cache
+D:\need\buffer\train_WCF\ChatServer\ChatServer\bin\Debug\ChatServer.exe
+D:\need\buffer\train_WCF\ChatServer\ChatServer\bin\Debug\ChatServer.pdb
+D:\need\buffer\train_WCF\ChatServer\ChatServer\obj\Debug\ChatServer.exe
+D:\need\buffer\train_WCF\ChatServer\ChatServer\obj\Debug\ChatServer.pdb

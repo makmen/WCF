@@ -1,0 +1,6 @@
+D:\need\buffer\train_WCF\WCF_duplexClient\WCF_duplexClient\bin\Debug\WCF_duplexClient.exe.config
+D:\need\buffer\train_WCF\WCF_duplexClient\WCF_duplexClient\bin\Debug\WCF_duplexClient.exe
+D:\need\buffer\train_WCF\WCF_duplexClient\WCF_duplexClient\bin\Debug\WCF_duplexClient.pdb
+D:\need\buffer\train_WCF\WCF_duplexClient\WCF_duplexClient\obj\Debug\WCF_duplexClient.csprojResolveAssemblyReference.cache
+D:\need\buffer\train_WCF\WCF_duplexClient\WCF_duplexClient\obj\Debug\WCF_duplexClient.exe
+D:\need\buffer\train_WCF\WCF_duplexClient\WCF_duplexClient\obj\Debug\WCF_duplexClient.pdb
